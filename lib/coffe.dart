@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+// import 'package:flutter_application_coffe_shp/coffe_homepage.dart';
 
 class MyCoffeeApp extends StatelessWidget {
   @override
@@ -32,7 +33,7 @@ class HomeScreen extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children:[
-             const Row(
+              const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Text.rich(

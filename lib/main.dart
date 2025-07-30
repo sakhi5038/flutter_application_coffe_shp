@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_coffe_shp/coffe.dart';
+import 'package:flutter_application_coffe_shp/coffe_homepage.dart';
 
 void main() {
-  runApp(MyCoffeeApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
@@ -12,6 +13,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
@@ -57,7 +59,9 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
+        onPressed: (){
+          Navigator.push(context, MaterialPageRoute(builder: (context) => CoffeeHomePage()));
+        },
         tooltip: 'Increment',
         child: const Icon(Icons.add),
       ), 
